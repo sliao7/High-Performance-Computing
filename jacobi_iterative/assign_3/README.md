@@ -6,7 +6,7 @@ CSE 6220 High Performance Computing Final Project
 
 * Summarized and analyzied the results in the [report](https://github.com/sliao7/High-Performance-Computing/blob/master/jacobi_iterative/assign_3/report.pdf)
 
-## Code structure
+## Code Structure
 
 All the code is located at the root level of the project.
 The `gtest` folder contains the Google Test Unit Testing framework version 1.7.
