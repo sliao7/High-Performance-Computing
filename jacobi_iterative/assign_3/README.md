@@ -1,7 +1,7 @@
 CSE 6220 High Performance Computing Final Project
 =================================
 ## Task
-* Inplemented Jacobi's methold sequentially and paralelly using MPI in C++
+* Inplemented Jacobi's methold for iteratively solving large system of linear equations sequentially and paralelly using MPI in C++
 * Tested the performance of the parallel implementation against the sequential implementation for various input size (max n = 1000), number of processors (max p = 64), and difficulties (max d = 0.9)
 
 * Summarized and analyzied the results in the [report](https://github.com/sliao7/High-Performance-Computing/blob/master/jacobi_iterative/assign_3/report.pdf)
