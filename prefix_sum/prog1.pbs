@@ -1,0 +1,13 @@
+#!/bin/bash
+# This is an example PBS script
+#PBS -N prog1 
+#PBS -l nodes=2:ppn=8 
+#PBS -l mem=2gb 
+#PBS -l walltime=00:15:00  
+#PBS -q coc-ice-multi  
+#PBS -o prog1.out 
+#PBS -m abe 
+# #PBS -M sliao7@gatech.edu
+
+module load gcc mvapich2/2.2
+for i in {1..10}; do mpirun -np 2 ./prog1 50000 111; done

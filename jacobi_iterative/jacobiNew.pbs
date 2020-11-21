@@ -1,0 +1,13 @@
+#PBS -N PA3
+#PBS -l nodes=4:ppn=16
+#PBS -l mem=16gb 
+#PBS -l walltime=30:00
+#PBS -q coc-ice-multi
+#PBS -o $PBS_JOBID.out
+#PBS -e $PBS_JOBID.err
+
+cd /nv/coc-ice/sliao7/pa3-template
+module load gcc mvapich2/2.2 python/3.6
+python3 generate_input.py 10000
+mpirun -np 64 ./jacobi input_A.bin input_b.bin output_x.bin
+python3 check_output.py input_A.bin input_b.bin output_x.bin >> check.out

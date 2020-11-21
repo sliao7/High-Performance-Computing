@@ -1,0 +1,17 @@
+#!/bin/bash
+# This is an example PBS script
+#PBS -N prog3
+#PBS -l nodes=2:ppn=8 
+#PBS -l mem=2gb 
+#PBS -l walltime=00:15:00  
+#PBS -q coc-ice-multi  
+#PBS -o prog3.out 
+#PBS -m abe 
+# #PBS -M sliao7@gatech.edu
+
+module load gcc mvapich2/2.2
+cd ..
+mv ~/mpi_jacobi.cpp ~/pa3-template
+cd pa3-template
+make all
+mpirun -np 4 ./mpi_tests
